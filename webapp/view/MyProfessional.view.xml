@@ -1,0 +1,98 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.uxap" xmlns:layout="sap.ui.layout" xmlns:m="sap.m"
+	xmlns:histo="sap.uxap.sample.SharedBlocks.histo" xmlns:personal="sap.uxap.sample.SharedBlocks.personal"
+	xmlns:employment="sap.uxap.sample.SharedBlocks.employment" xmlns:connections="sap.uxap.sample.SharedBlocks.connections"
+	controllerName="sap.uxap.sample.MyProfessional.controller.MyProfessional" height="100%">
+	<m:Shell id="shell">
+		<m:App id="app">
+			<m:pages>
+				<m:Page id="page">
+					<m:content>
+						<ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="true" useIconTabBar="true" alwaysShowContentHeader="false"
+							headerContentPinnable="true" showTitleInHeaderContent="false" preserveHeaderStateOnScroll="false" upperCaseAnchorBar="true"
+							toggleHeaderOnTitleClick="false" showAnchorBarPopover="false">
+							<headerTitle>
+								<ObjectPageDynamicHeaderTitle>
+									<heading>
+										<m:FlexBox wrap="Wrap" fitContainer="true">
+											<!--<m:Avatar class="sapUiSmallMarginEnd" src="./test-resources/sap/uxap/images/imageID_275314.png" displaySize="L"/>-->
+											<layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+												<m:Title text="Denise Smith" wrapping="true"/>
+												<m:Link text="DeniseSmith@sap.com"/>
+											</layout:VerticalLayout>
+											<layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+												<m:HBox>
+													<m:ObjectAttribute id="orgUnitAttr" title="Aaaaaa" text="Bbgdgfdsg" visible="true"/>
+												</m:HBox>
+												<!--Org.Unit-->
+												<!--<m:VBox>-->
+												<!--	<m:Label text="Organizational Unit: TEST"/>-->
+												<!--	<m:Title text="ConstCenter"/>-->
+													<m:Label text="Nom du responsable: Paul Greg"/>
+												<!--</m:VBox>-->
+											</layout:VerticalLayout>
+											
+											<layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+												<m:HBox>
+													<m:ObjectAttribute id="orgUnitAttr2" title="Aaaaaa" text="Bbgdgfdsg" visible="true"/>
+												</m:HBox>
+												<!--Org.Unit-->
+												<!--<m:VBox>-->
+												<!--	<m:Label text="Organizational Unit: TEST"/>-->
+												<!--	<m:Title text="ConstCenter"/>-->
+												<!--	<m:Label text="Nom du responsable: Paul Greg"/>-->
+												<!--</m:VBox>-->
+											</layout:VerticalLayout>
+											
+										</m:FlexBox>
+									</heading>
+									<actions>
+										<m:Button text="OnBehalf" type="Emphasized"/>
+										<m:OverflowToolbarButton icon="sap-icon://action" type="Transparent" text="Share" tooltip="action"/>
+									</actions>
+								</ObjectPageDynamicHeaderTitle>
+							</headerTitle>
+							<sections>
+								<ObjectPageSection titleUppercase="false" id="personal" title="Personal" wrapTitle="true">
+									<subSections>
+										<ObjectPageSubSection id="personalSS1" title="Employment data" titleUppercase="false">
+											<!--<blocks>-->
+											<!--<personal:BlockPhoneNumber id="phone" columnLayout="auto"/>-->
+											<personal:BlockAdresses id="adresses1" columnLayout="auto"/>
+											<personal:BlockAdresses id="adresses" columnLayout="2"/>
+											<!--</blocks>-->
+										</ObjectPageSubSection>
+										<ObjectPageSubSection >
+											<blocks>
+												<!--<personal:BlockPhoneNumber id="phone2" columnLayout="2" visible="false"/>-->
+												<!--<personal:BlockAdresses id="adresses2" columnLayout="2" visible="false"/>-->
+												<personal:BlockPhoneNumber id="phone2" columnLayout="auto"/>
+												<personal:BlockAdresses id="adresses2" columnLayout="2"/>
+											</blocks>
+										</ObjectPageSubSection>
+										<ObjectPageSubSection id="personalSS2" title="Organizational data" titleUppercase="false">
+											<blocks>
+												<!--<personal:PersonalBlockPart1 id="part1" columnLayout="1"/>-->
+												<!--<personal:PersonalBlockPart2 id="part2" columnLayout="1"/>-->
+												<personal:BlockPhoneNumber id="phone3" columnLayout="auto"/>
+												<personal:BlockAdresses id="adresses3" columnLayout="2"/>
+											</blocks>
+										</ObjectPageSubSection>
+									</subSections>
+								</ObjectPageSection>
+								<ObjectPageSection titleUppercase="false" id="histo" title="Historique">
+									<subSections>
+										<ObjectPageSubSection id="histoSS1" titleUppercase="false">
+											<blocks>
+												<histo:HistoBlock id="histoblock"/>
+											</blocks>
+										</ObjectPageSubSection>
+									</subSections>
+								</ObjectPageSection>
+							</sections>
+						</ObjectPageLayout>
+					</m:content>
+				</m:Page>
+			</m:pages>
+		</m:App>
+	</m:Shell>
+</mvc:View>

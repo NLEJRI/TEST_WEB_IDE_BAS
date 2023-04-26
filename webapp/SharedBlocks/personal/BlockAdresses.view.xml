@@ -1,0 +1,18 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:forms="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:layout="sap.ui.layout">
+	<VBox class="sapUiSmallMargin">
+		<forms:SimpleForm layout="ColumnLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false"
+			emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="3" columnsM="1" singleContainerFullSize="false"
+			width="100%">
+			<!--<layout:VerticalLayout>-->
+				<forms:content>
+					<Label text="Home Address"/>
+					<Text text="2096 Mission Street"/>
+					<Label text="Mailing Address"/>
+					<Text text="PO Box 32114 TEST BAS"/>
+					<Label text="Aaaaa" id="lblFirstName" labelFor="txtFirstName" visible="true"/>
+					<Text id="txtFirstName" text="Lmpsdpqs" visible="true"/>
+				</forms:content>
+			<!--</layout:VerticalLayout>-->
+		</forms:SimpleForm>
+	</VBox>
+</mvc:View>

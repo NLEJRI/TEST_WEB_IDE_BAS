@@ -1,0 +1,13 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:forms="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout">
+	<l:VerticalLayout id="histoContainer" content="{ path: 'ObjectPageModel>/Employee', templateShareable: false }" visible="true">
+		<forms:SimpleForm layout="ResponsiveGridLayout" editable="false" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12"
+			adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1"
+			singleContainerFullSize="false" width="100%">
+			<forms:content>
+				<HBox>
+					<ObjectAttribute id="histo" title="{i18n>employeeStatus}" text="{ObjectPageModel>name}"/>
+				</HBox>
+			</forms:content>
+		</forms:SimpleForm>
+	</l:VerticalLayout>
+</mvc:View>

@@ -1,0 +1,69 @@
+{
+    "_version": "1.12.0",
+    "sap.app": {
+        "id": "sap.uxap.sample.MyProfessional",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "sourceTemplate": {
+            "id": "@sap/ux-app-migrator:freestyle",
+            "version": "1.9.4",
+            "toolsId": "c851805f-5ace-4d85-830c-4ddc0a415a15"
+        }
+    },
+    "sap.ui5": {
+        "rootView": {
+            "viewName": "sap.uxap.sample.MyProfessional.view.MyProfessional",
+            "type": "XML",
+            "async": true
+        },
+        "resourceRoots": {
+            "sap.uxap.sample.SharedBlocks": "./SharedBlocks",
+            "sap.uxap.sample.SharedJSONData": "./SharedJSONData"
+        },
+        "dependencies": {
+            "libs": {
+                "sap.m": {},
+                "sap.uxap": {}
+            }
+        },
+        "config": {
+            "sample": {
+                "stretch": true,
+                "files": [
+                    "view/MyProfessional.view.xml",
+                    "controller/MyProfessional.controller.js",
+                    "./SharedBlocks/histo/HistoBlock.js",
+                    "./SharedBlocks/histo/HistoBlock.view.xml",
+                    "./SharedBlocks/personal/BlockAdresses.js",
+                    "./SharedBlocks/personal/BlockAdresses.view.xml",
+                    "./SharedBlocks/personal/BlockMailing.js",
+                    "./SharedBlocks/personal/BlockMailing.view.xml",
+                    "./SharedBlocks/personal/BlockPhoneNumber.js",
+                    "./SharedBlocks/personal/BlockPhoneNumber.view.xml",
+                    "./SharedBlocks/personal/BlockSocial.js",
+                    "./SharedBlocks/personal/BlockSocial.view.xml",
+                    "./SharedBlocks/personal/PersonalBlockPart1.js",
+                    "./SharedBlocks/personal/PersonalBlockPart1.view.xml",
+                    "./SharedBlocks/personal/PersonalBlockPart2.js",
+                    "./SharedBlocks/personal/PersonalBlockPart2.view.xml",
+                    "manifest.json"
+                ]
+            }
+        }
+    },
+    "models": {
+        "i18n": {
+            "type": "sap.ui.model.resource.ResourceModel",
+            "settings": {
+                "bundleName": "sap.uxap.sample.MyProfessional.i18n.i18n"
+            }
+        }
+    },
+    "sap.platform.abap": {
+        "uri": "/sap/bc/ui5_ui5/sap/zhcmfab_myprofe",
+        "_version": "1.1.0"
+    }
+}
